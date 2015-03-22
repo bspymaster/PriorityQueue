@@ -40,7 +40,7 @@ public:
 
   // Insert "it" into the heap
   void insert(const E& it) {
-    Assert(n < maxsize, "Heap is full");
+    // Assert(n < maxsize, "Heap is full");
     int curr = n++;
     Heap[curr] = it;            // Start at end of heap
     // Now sift up until curr's parent > curr
@@ -52,7 +52,7 @@ public:
   }
   // Remove first value
   E removefirst() {
-    Assert (n > 0, "Heap is empty");
+    // Assert (n > 0, "Heap is empty");
     swap(Heap, 0, --n);       // Swap first with last value
     if (n != 0) siftdown(0);  // Siftdown new root val
     return Heap[n];             // Return deleted value
@@ -60,7 +60,7 @@ public:
 
   // Remove and return element at specified position
   E remove(int pos) {
-    Assert((pos >= 0) && (pos < n), "Bad position");
+    // Assert((pos >= 0) && (pos < n), "Bad position");
     if (pos == (n-1)) n--; // Last element, no work to do
     else
     {

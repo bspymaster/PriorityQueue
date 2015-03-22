@@ -1,6 +1,7 @@
 #include "priorityQueue.h"
 
 int main(int argc, char** argv) {
-	PriorityQueue queue = PriorityQueue(FIXME, 1, 7);
+	int arr = 7;
+	PriorityQueue queue = PriorityQueue(&arr, 0, 7);
 	return 0;
 }

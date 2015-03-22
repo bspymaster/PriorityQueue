@@ -1,15 +1,21 @@
-﻿Build started 3/22/2015 4:14:56 PM.
+﻿Build started 3/22/2015 5:01:29 PM.
      1>Project "C:\Users\Ben\Documents\GitHub\PriorityQueue\Project1\Project1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\PriorityQueue\main.cpp
          main.cpp
-     1>c:\users\ben\documents\github\priorityqueue\priorityqueue\priorityqueue.h(18): error C2143: syntax error : missing ';' before '<'
-     1>c:\users\ben\documents\github\priorityqueue\priorityqueue\priorityqueue.h(18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\ben\documents\github\priorityqueue\priorityqueue\priorityqueue.h(18): error C2238: unexpected token(s) preceding ';'
-     1>c:\users\ben\documents\github\priorityqueue\priorityqueue\priorityqueue.h(25): error C2143: syntax error : missing ';' before '.'
-     1>c:\users\ben\documents\github\priorityqueue\priorityqueue\priorityqueue.h(28): error C3861: 'removeFirst': identifier not found
+     1>c:\users\ben\documents\github\priorityqueue\priorityqueue\priorityqueue.h(18): error C2955: 'heap' : use of class template requires template argument list
+                 c:\users\ben\documents\github\priorityqueue\priorityqueue\heap.h(7) : see declaration of 'heap'
+     1>c:\users\ben\documents\github\priorityqueue\priorityqueue\priorityqueue.h(20): error C2512: 'heap' : no appropriate default constructor available
+     1>c:\users\ben\documents\github\priorityqueue\priorityqueue\priorityqueue.h(21): error C2582: 'operator =' function is unavailable in 'heap'
+     1>c:\users\ben\documents\github\priorityqueue\priorityqueue\priorityqueue.h(25): error C2662: 'void heap<E,Comp>::insert(const E &)' : cannot convert 'this' pointer from 'heap' to 'heap<E,Comp> &'
+                 Reason: cannot convert from 'heap' to 'heap<E,Comp>'
+                 Conversion requires a second user-defined-conversion operator or constructor
+     1>c:\users\ben\documents\github\priorityqueue\priorityqueue\priorityqueue.h(28): error C2662: 'E heap<E,Comp>::removefirst(void)' : cannot convert 'this' pointer from 'heap' to 'heap<E,Comp> &'
+                 Reason: cannot convert from 'heap' to 'heap<E,Comp>'
+                 Conversion requires a second user-defined-conversion operator or constructor
+     1>c:\users\ben\documents\github\priorityqueue\priorityqueue\main.cpp(5): error C2558: class 'PriorityQueue' : no copy constructor available or copy constructor is declared 'explicit'
      1>Done Building Project "C:\Users\Ben\Documents\GitHub\PriorityQueue\Project1\Project1.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:00.31
+Time Elapsed 00:00:00.20
