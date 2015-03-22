@@ -15,17 +15,17 @@ public:
 };
 class PriorityQueue{
 private:
-	Heap<int,IntCompare>* = heap;
+	Heap<int,IntCompare> heap;
 public:
-	PriorityQueue(){
-
+	PriorityQueue(E* objArray, int size, int maxSize){
+		heap = Heap(objArray, size, maxSize);
 	}
 	void enqueue(int ObjectID, int priority){
 		PriorityPair* obj = new PriorityPair(ObjectID, priority);
-		insert(obj);
+		heap.insert(obj);
 	}
 	void dequeue(){
-		PriorityPair* obj = removeFirst();
+		PriorityPair* obj = heap.removeFirst();
 		delete obj;
 	}
 	void changeWeight(int ObjectID, int newPriority){
