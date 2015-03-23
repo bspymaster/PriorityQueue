@@ -15,18 +15,17 @@ public:
 };
 class PriorityQueue{
 private:
-	heap tree;
+	heap<PriorityPair, IntCompare>* tree;
 public:
-	PriorityQueue(int* objArray, int size, int maxSize){
-		tree = heap<int, IntCompare> (objArray, size, maxSize);
+	PriorityQueue(PriorityPair* objArray, int size, int maxSize){
+		tree = new heap<PriorityPair, IntCompare> (objArray, size, maxSize);
 	}
 	void enqueue(int ObjectID, int priority){
 		PriorityPair* obj = new PriorityPair(ObjectID, priority);
-		tree.insert(obj);
+		tree->insert(obj);
 	}
 	void dequeue(){
-		PriorityPair* obj = tree.removefirst();
-		delete obj;
+		delete tree->removefirst();
 	}
 	void changeWeight(int ObjectID, int newPriority){
 		

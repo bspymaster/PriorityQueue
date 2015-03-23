@@ -9,4 +9,6 @@ public:
 	}
 	int getData(){ return data; }
 	int getPriority(){ return priority; }
+	
+	int setData(){}
 };
