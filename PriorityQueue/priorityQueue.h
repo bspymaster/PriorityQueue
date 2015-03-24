@@ -9,23 +9,24 @@
 
 class IntCompare{
 public:
-	static bool prior(PriorityPair* current, PriorityPair* parent){
-		return (current->getPriority() > parent->getPriority());
+	static bool prior(PriorityPair current, PriorityPair parent){
+		return (current.getPriority() > parent.getPriority());
 	}
 };
 class PriorityQueue{
 private:
 	heap<PriorityPair, IntCompare>* tree;
 public:
-	PriorityQueue(PriorityPair* objArray, int size, int maxSize){
-		tree = new heap<PriorityPair, IntCompare> (objArray, size, maxSize);
+	PriorityQueue(int maxSize){
+		PriorityPair* objArray = new PriorityPair[maxSize];
+		tree = new heap<PriorityPair, IntCompare> (objArray, 0, maxSize);
 	}
 	void enqueue(int ObjectID, int priority){
-		PriorityPair* obj = new PriorityPair(ObjectID, priority);
+		PriorityPair obj(ObjectID, priority);
 		tree->insert(obj);
 	}
-	void dequeue(){
-		delete tree->removefirst();
+	int dequeue(){
+		return tree->removefirst().getData();
 	}
 	void changeWeight(int ObjectID, int newPriority){
 		

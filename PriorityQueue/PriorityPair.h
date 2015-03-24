@@ -7,6 +7,10 @@ public:
 		data = _data;
 		priority = _priority;
 	}
+	PriorityPair(){
+		data = 0;
+		priority = 0;
+	}
 	int getData(){ return data; }
 	int getPriority(){ return priority; }
 	

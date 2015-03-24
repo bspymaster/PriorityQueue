@@ -3,6 +3,14 @@
 // Third Edition (C++)" by Clifford A. Shaffer.
 // Source code Copyright (C) 2007-2011 by Clifford A. Shaffer.
 
+template <typename E>
+void swap(E Array[], int i, int j){
+	E temp = Array[i];
+	Array[i] = Array[j];
+	Array[j] = temp;
+}
+
+
 // Heap class
 template <typename E, typename Comp> class heap {
 private:
