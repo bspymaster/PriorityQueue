@@ -10,7 +10,7 @@
 class IntCompare{
 public:
 	static bool prior(PriorityPair current, PriorityPair parent){
-		return (current.getPriority() > parent.getPriority());
+		return (current.getPriority() < parent.getPriority());
 	}
 };
 class PriorityQueue{
